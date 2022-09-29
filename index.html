@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Finance</title>
+    <meta name="description" content="Control Finance - Seu controle financeiro">
+
+    <script defer src="./scripts/modal.js"></script>
+    <script defer src="./pages/home/index.js"></script>
+    <script defer src="./pages/home/valuesData.js"></script>
+    
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./pages/home/index.css">
+    <link rel="stylesheet" href="./styles/globalStyles.css">
+</head>
+<body>
+    <main id="app">
+        <header class="header">
+          
+            <img src="./pages/home/controlFinance.svg">
+            <button id="newValue" class="buttonHeader">Registrar Novo Valor</button>
+      
+        </header>
+        <div class="resumo-financeiro"> 
+            <p class="title-resumo-financeiro"> Resumo financeiro </p>
+            <div class="buttons-resumo-financeiro">
+                <button class="button-resumo-financeiro" id="todos">Todos</button>
+                <button class="button-resumo-financeiro" id="entradas"> Entradas</button>
+                <button class="button-resumo-financeiro" id="saidas">Saídas</button>
+            </div>
+            
+        </div>
+        <div class="soma-de-valores">
+            <p class="title-soma-de-valores">Soma de valores</p>
+            <p class="valor-soma-de-valores"> R$ 342 DOM</p>
+        </div>
+        <ul class="ul-entradas">
+            <li class="lista-entradas">
+                <p class="valor-entrada"> R$ entrada</p>
+                <div class="botoes-lista">
+                    <p class="p-entrada">Entrada</p>
+                    <button class="excluir"><img class="lixo" src="./pages/home/lixo.svg"></button>
+                </div>
+            </li>
+        </ul>
+    </main>
+    
+</body>
+</html>

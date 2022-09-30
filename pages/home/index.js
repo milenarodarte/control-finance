@@ -1,4 +1,4 @@
-const botaoHeader = document.querySelector('.buttonHeader')
+
 const botaoTodos = document.querySelector('.todos')
 const botaoEntradas = document.querySelector('.entradas')
 const botaoSaidas = document.querySelector('.saidas')
@@ -20,7 +20,7 @@ function criandoCardEntradaSaida() {
 
     const botaoLixo = document.createElement('button')
     botaoLixo.setAttribute('class', 'excluir')
-    const imglixo = document.createAttribute('img')
+    const imglixo = document.createElement('img')
     imglixo.setAttribute('class', 'lixo')
     imglixo.setAttribute('src',"./pages/home/lixo.svg" )
     botaoLixo.appendChild(imglixo)
@@ -28,7 +28,7 @@ function criandoCardEntradaSaida() {
     const entradaSaida = document.createElement('p')
     entradaSaida.setAttribute('class', 'p-entrada')
     const botoesLista = document.createElement('div')
-    botoesLista.setAttribute('clkass', 'botoes-lista')
+    botoesLista.setAttribute('class', 'botoes-lista')
 
     botoesLista.append(entradaSaida, botaoLixo)
 

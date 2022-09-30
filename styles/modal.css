@@ -1,11 +1,12 @@
 .modal-container {
+    position: absolute;
     width: 100vw;
     height: 100vh;
     background-color: var(--color-grey-1-opacity-5);
-    display: none;
+   display: none;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    
 
 }
 .modal {
@@ -31,8 +32,8 @@
     bottom: 18.5rem;
     left: 23.063rem;
     right: 1.5rem;
-    display: none;
-
+  
+    
 }
 .registro-de-valor {
     margin-top: 1.5rem;
@@ -42,7 +43,7 @@
     font-size: var(--font-size-2);
     line-height: 1.21rem;
     margin-bottom:1.625rem;
-    display: none
+
 
 }
 .instrucoes-registro-de-valor {
@@ -65,7 +66,7 @@
     line-height: 1.063rem ;
     margin-bottom: 0.5rem;
 }
-#input-valor {
+.input-valor {
     width: 21.75;
     height: 2.75rem;
     border-radius: 0.5rem;
@@ -135,4 +136,7 @@
 }
 .show-modal {
     display: flex;
+}
+.show {
+display: flex;
 }

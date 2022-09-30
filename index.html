@@ -11,11 +11,36 @@
     <script defer src="./pages/home/index.js"></script>
     <script defer src="./pages/home/valuesData.js"></script>
     
+    <link rel="stylesheet" href="./styles/modal.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./pages/home/index.css">
     <link rel="stylesheet" href="./styles/globalStyles.css">
 </head>
 <body>
+    <div class="modal-container">
+        <!-- <div class="modal"> -->
+            <button class="close-modal">X</button>
+            <p class="registro-de-valor">Registro de valor</p>
+            <p class="instrucoes-registro-de-valor"> Digite o valor e em seguida aperte no botão referente ao tipo do valor</p>
+            <form class="inserir-valor">
+                <label for="input-valor" class="label-valor"> Valor </label>
+                <input id="input-valor" type="number" required>
+                <div class="input-radio">
+                    <p class="tipo-de-valor">Tipo de Valor </p>
+                    <label for="entrada" class="label-radio">entrada </label>
+                    <input type="radio" name="escolha-entrada-saida" id="entrada" value="entrada" class="radio-button">
+                    <label for="saida" class="label-radio">saída</label>
+                    <input type="radio" name="escolha-entrada-saida" id="saida" value="saida" class="radio-button">
+                </div>
+                
+                
+               <div class="botoes-modal-enviar-cancelar">
+                    <button class="botao-cancelar-modal"> Cancelar</button>
+                    <button class="botao-enviar-modal"type="submit" value="submit"> Inserir Valor</button>
+               </div>
+            </form>
+        <!-- </div> -->
+    </div>
     <main id="app">
         <header class="header">
           
@@ -34,16 +59,16 @@
         </div>
         <div class="soma-de-valores">
             <p class="title-soma-de-valores">Soma de valores</p>
-            <p class="valor-soma-de-valores"> R$ 342 DOM</p>
+            <!-- <p class="valor-soma-de-valores"> R$ 342 DOM</p> -->
         </div>
         <ul class="ul-entradas">
-            <li class="lista-entradas">
+           <!--  <li class="lista-entradas">
                 <p class="valor-entrada"> R$ entrada</p>
                 <div class="botoes-lista">
                     <p class="p-entrada">Entrada</p>
                     <button class="excluir"><img class="lixo" src="./pages/home/lixo.svg"></button>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </main>
     

@@ -1,0 +1,138 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color-grey-1-opacity-5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+
+}
+.modal {
+    width: 26.75rem;
+    height: 21.875rem;
+    background-color: var(--fixed-white);
+    border-radius: 0.5rem;
+    position: relative;
+    
+
+}
+.inserir-valor {
+    display: flex;
+    flex-direction: column;
+}
+.close-modal {
+    position: absolute;
+    width: 2.188rem;
+    height: 1.875rem;
+    background-color: var(--color-grey-5);
+    border-radius: 0.25rem;
+    border: none;
+    bottom: 18.5rem;
+    left: 23.063rem;
+    right: 1.5rem;
+    display: none;
+
+}
+.registro-de-valor {
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    height: 1.875rem;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+    line-height: 1.21rem;
+    margin-bottom:1.625rem;
+    display: none
+
+}
+.instrucoes-registro-de-valor {
+    margin-left: 1.5rem;
+    color: var(--color-grey-2);
+    font-weight: var(--font-weight-3);
+    font-size: var(--font-size-3);
+    line-height: 1.313rem;
+    width: 23.75;
+    height: 2.625rem;
+    margin-bottom: 1.563rem;
+    margin-right: 1.5rem;
+
+}
+.label-valor{
+    margin-left: 1.5rem;
+    height: 1.063rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    line-height: 1.063rem ;
+    margin-bottom: 0.5rem;
+}
+#input-valor {
+    width: 21.75;
+    height: 2.75rem;
+    border-radius: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border: 0.125rem solid var(--color-grey-3);
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+.input-radio {
+    display: flex;
+    align-items: center;
+
+}
+.tipo-de-valor {
+    margin-top: 1.563rem;
+    margin-left: 1.5rem;
+    height: 1.063rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-2);
+    line-height: 1.063rem ;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+.label-radio {
+    margin-top: 1.563rem;
+}
+.radio-button {
+    margin-top: 1.563rem;
+    margin-right: 0.75rem;
+
+}
+.botoes-modal-enviar-cancelar {
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.438rem ;
+}
+.botao-cancelar-modal {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-grey-4);
+    color: var(--color-grey-2);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    line-height: 1rem;
+    height: 1.938rem;
+    padding-top:0.438rem ;
+    padding-left:0.875rem;
+    padding-bottom:0.438rem ;
+    padding-right: 0.875rem;
+    margin-right: 1rem;
+}
+.botao-enviar-modal {
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--color-brand-1);
+    color: var(--fixed-white);
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-1);
+    line-height: 1rem;
+    height: 1.938rem;
+    padding-top:0.438rem ;
+    padding-left:0.875rem;
+    padding-bottom:0.438rem ;
+    padding-right: 0.875rem;
+}
+.show-modal {
+    display: flex;
+}

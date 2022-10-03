@@ -156,6 +156,124 @@
 .show-modal {
     display: flex;
 }
-.show {
-display: flex;
+
+
+@media (max-width: 500px){
+    .modal {
+        width: 21.438rem;
+        height: 27rem;
+        background-color: var(--fixed-white);
+        border-radius: 0.5rem;
+        position: relative;
+        
+    }
+
+    .close-modal {
+        position: absolute;
+        width: 2.188rem;
+        height: 1.875rem;
+        background-color: var(--color-grey-5);
+        border-radius: 0.25rem;
+        border: none;
+        bottom: 23.625rem;
+        left: 17.75rem;
+  
+    
+    }
+    
+   
+
+
+    .escolher-valor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1.563rem;
+        
+        height: 6.813rem;
+        
+    }
+    .tipo-de-valor {
+        
+        margin-left: 1.5rem;
+        height: 1.063rem;
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-2);
+        line-height: 1.063rem ;
+        margin-bottom: 1rem;
+        margin-right: 1rem;
+        height: 2rem;
+        
+        
+    }
+    .botao-entrada {
+        height: 2rem;
+        border-radius: 0.5rem;
+        padding-left:0.875rem ;
+        padding-right: 0.875rem;
+        margin-bottom: 0.75rem;
+        border: 0.063rem solid var(--color-grey-5);
+        height: 2rem;
+        width: 18.438rem;
+        background-color: var(--fixed-white);
+    }
+    .botao-saida {
+       margin: 0 auto;
+        height: 2rem;
+        border-radius: 0.5rem;
+        padding-left:0.875rem ;
+        padding-right: 0.875rem;
+        border: 0.063rem solid var(--color-grey-5);
+        height: 2rem;
+        width: 18.438rem;
+        background-color: var(--fixed-white);
+    }
+
+
+
+    .botoes-modal-enviar-cancelar {
+        margin-right: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1.438rem ;
+    }
+    .botao-cancelar-modal {
+        position: absolute;
+        top: 23.563rem;
+        left: 1.5rem;
+        border: none;
+        width: 8.719rem;
+        border-radius: 0.5rem;
+        background-color: var(--color-grey-4);
+        color: var(--color-grey-2);
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-1);
+        line-height: 1rem;
+        height: 1.938rem;
+        padding-top:0.438rem ;
+        padding-left:0.875rem;
+        padding-bottom:0.438rem ;
+        padding-right: 0.875rem;
+        margin-right: 1rem;
+    }
+    .botao-enviar-modal {
+        border: none;
+        border-radius: 0.5rem;
+        background-color: var(--color-brand-1);
+        color: var(--fixed-white);
+        font-size: var(--font-size-3);
+        font-weight: var(--font-weight-1);
+        line-height: 1rem;
+        height: 1.938rem;
+        padding-top:0.438rem ;
+        padding-left:0.875rem;
+        padding-bottom:0.438rem ;
+        padding-right: 0.875rem;
+        width: 8.719rem;
+        margin-top: 0.25rem;
+        
+    }
+    .show-modal {
+        display: flex;
+    }
 }

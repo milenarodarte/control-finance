@@ -12,6 +12,7 @@ closeModal.setAttribute('class', 'close-modal')
 const registroDeValor = document.createElement('p')
 registroDeValor.innerText = 'Registro de valor'
 registroDeValor.setAttribute('class', 'registro-de-valor')
+registroDeValor.setAttribute('placeholder', '00,00')
 
 
 
@@ -118,10 +119,18 @@ function criandoModal () {
         if ( el.classList.contains('botao-enviar-modal')){
             let listaFormadoraEntradaSaida = criandoCardEntradaSaida()
             listaFormadoraEntradaSaida.classList.toggle('show-modal')
-           
+            console.log(listaFormadoraEntradaSaida)
         }
         
     })
+    botaoCancelarModal.addEventListener('click', function (e) {
+        const el= e.target
+        if (el.classList.contains('botao-cancelar-modal')) {
+            modalContainer.classList.toggle('show-modal')
+            
+        }
+    })
+    
 }
 criandoModal()
 
@@ -144,6 +153,7 @@ function adicionarEventoClick (){
         }
        
     })
+    
 
     nenhumValor.addEventListener('click', function (e){
         const elemento = e.target

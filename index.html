@@ -7,9 +7,10 @@
     <title>Control Finance</title>
     <meta name="description" content="Control Finance - Seu controle financeiro">
 
+    <script defer src="./pages/home/valuesData.js"></script>
     <script defer src="./scripts/modal.js"></script>
     <script defer src="./pages/home/index.js"></script>
-    <script defer src="./pages/home/valuesData.js"></script>
+   
     
     <link rel="stylesheet" href="./styles/modal.css">
     
@@ -26,7 +27,7 @@
             <form class="inserir-valor">
                 <label for="input-valor" class="label-valor"> Valor </label>
                 <input id="input-valor" type="number" required>
-                <div class="input-radio">
+                <div class="escolher-valor">
                     <p class="tipo-de-valor">Tipo de Valor </p>
                     <label for="entrada" class="label-radio">entrada </label>
                     <input type="radio" name="escolha-entrada-saida" id="entrada" value="entrada" class="radio-button">
@@ -45,7 +46,7 @@
     <main id="app">
         <header class="header">
           
-            <img src="./pages/home/controlFinance.svg">
+            <img src="./pages/home/controlFinance.svg" class="img-header">
             <button id="newValue" class="botaoHeader">Registrar Novo Valor</button>
       
         </header>

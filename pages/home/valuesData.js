@@ -17,3 +17,8 @@ let insertedValues = [
     categoryID: 1,
   },
 ];
+
+console.log(insertedValues)
+
+
+

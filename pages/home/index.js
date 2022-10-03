@@ -17,9 +17,12 @@ criandoValorSomaDeValores()
 
 function criandoCardEntradaSaida() {
 
+    /* const {categoryID, value, id} = insertedValues */
+
 
     const botaoLixo = document.createElement('button')
     botaoLixo.setAttribute('class', 'excluir')
+
     const imglixo = document.createElement('img')
     imglixo.setAttribute('class', 'lixo')
     imglixo.setAttribute('src',"./pages/home/lixo.svg" )
@@ -27,6 +30,7 @@ function criandoCardEntradaSaida() {
 
     const entradaSaida = document.createElement('p')
     entradaSaida.setAttribute('class', 'p-entrada')
+
     const botoesLista = document.createElement('div')
     botoesLista.setAttribute('class', 'botoes-lista')
 
@@ -34,14 +38,37 @@ function criandoCardEntradaSaida() {
 
     const listaEntradas = document.createElement('li')
     listaEntradas.setAttribute('class', 'lista-entradas')
+    /* listaEntradas.setAttribute('id', id) */
+
     const valorEntrada = document.createElement('p')
     valorEntrada.setAttribute('class', 'valor-entrada')
+    valorEntrada.innerText = `R$ 50,00`
 
     listaEntradas.append(valorEntrada,botoesLista)
 
-    ulEntradas.append(listaEntradas)
+    
 
-
+    return listaEntradas
 }
 criandoCardEntradaSaida()
+   
 
+/* const renderCards = (valoresLista) => {
+    let listaEntradasESaidas = {...criandoCardEntradaSaida}
+    console.log(listaEntradasESaidas)
+    valoresLista.forEach((elemento) => {
+        
+        elemento.forEach((dados) => {
+            listaENtradasESaidas
+        })
+        
+    });
+}
+renderCards(insertedValues) */
+
+function displayMobile () {
+    if ( window.innerWidth <= 500) {
+        
+    }
+}
+console.log(window.innerWidth )

@@ -14,6 +14,7 @@ registroDeValor.innerText = 'Registro de valor'
 registroDeValor.setAttribute('class', 'registro-de-valor')
 
 
+
 function criandoModal () {
     
     //close modal e registro de valor estao sendo criados no card
@@ -26,6 +27,7 @@ function criandoModal () {
     const instrucoesRegistroDeValor = document.createElement('p')
     instrucoesRegistroDeValor.innerText = 'Digite o valor e em seguida aperte no botão referente ao tipo do valor'
     instrucoesRegistroDeValor.setAttribute('class', 'instrucoes-registro-de-valor')
+    
     const inserirValor = document.createElement('form')
     inserirValor.setAttribute('class', 'inserir-valor')
    
@@ -34,13 +36,14 @@ function criandoModal () {
     labelValor.innerText = 'Valor'
     labelValor.setAttribute('class', 'label-valor')
     labelValor.setAttribute('for', 'input-valor')
+
     const inputValor = document.createElement('input')
     inputValor.setAttribute('class', 'input-valor')
     inputValor.setAttribute('type', 'number')
 
     inputValor.setAttribute('required', 'precisa-declarar') 
-    const divInputRadio = document.createElement('div')
-    divInputRadio.setAttribute('class', 'input-radio')
+    const divInputBotoes = document.createElement('div')
+    divInputBotoes.setAttribute('class', 'escolher-valor')
     const botoesModalEnviarCancelar = document.createElement('div')
     botoesModalEnviarCancelar.setAttribute('class', 'botoes-modal-enviar-cancelar')
 
@@ -49,6 +52,22 @@ function criandoModal () {
     tipoDeValor.setAttribute('class', 'tipo-de-valor')
     tipoDeValor.innerText='Tipo de valor'
 
+    const buttonEntrada = document.createElement('button')
+    buttonEntrada.innerText = 'Entrada'
+    buttonEntrada.setAttribute('class', 'botao-entrada')
+    buttonEntrada.setAttribute('name', 'escolha-entrada-saida')
+    buttonEntrada.setAttribute('id', 'entrada')
+    buttonEntrada.setAttribute('value', 'entrada')
+
+    const buttonSaida = document.createElement('button')
+    buttonSaida.innerText = 'Saída'
+    buttonSaida.setAttribute('class', 'botao-saida')
+    buttonSaida.setAttribute('name', 'escolha-entrada-saida')
+    buttonSaida.setAttribute('id', 'saida')
+    buttonSaida.setAttribute('value', 'saida')
+
+
+/* 
     const labelRadioEntrada = document.createElement('label')
     labelRadioEntrada.innerText = 'entrada'
     labelRadioEntrada.setAttribute('class', 'label-radio')
@@ -68,7 +87,7 @@ function criandoModal () {
     inputRadioSaida.setAttribute('name','escolha-entrada-saida')
     inputRadioSaida.setAttribute('id', 'saida')
     inputRadioSaida.setAttribute('class','radio-button')
-    inputRadioSaida.setAttribute('value', 'saida')
+    inputRadioSaida.setAttribute('value', 'saida') */
 
    
 
@@ -76,35 +95,48 @@ function criandoModal () {
     const botaoCancelarModal = document.createElement('button')
     botaoCancelarModal.setAttribute('class', 'botao-cancelar-modal')
     botaoCancelarModal.innerText = 'Cancelar'
+
+    
     const botaoEnviarModal = document.createElement('button')
     botaoEnviarModal.setAttribute('class', 'botao-enviar-modal')
     botaoEnviarModal.setAttribute('type', 'submit')
     botaoEnviarModal.setAttribute('value', 'submit')
-    botaoEnviarModal.innerText = 'Enviar'
+    botaoEnviarModal.innerText = 'Inserir valor'
 
    
 
     body.append(modalContainer, main)
     modalContainer.append(modal)
-    modal.append(closeModal, registroDeValor, instrucoesRegistroDeValor, inserirValor)
-    inserirValor.append(labelValor,inputValor,divInputRadio,botoesModalEnviarCancelar)
-    divInputRadio.append(tipoDeValor,labelRadioEntrada,inputRadioEntrada,labelRadioSaida,inputRadioSaida)
-    botoesModalEnviarCancelar.append(botaoCancelarModal,botaoEnviarModal)
+    modal.append(closeModal, registroDeValor, instrucoesRegistroDeValor, inserirValor,  botaoCancelarModal)
+    inserirValor.append(labelValor,inputValor,divInputBotoes,botoesModalEnviarCancelar)
+    divInputBotoes.append(tipoDeValor,buttonEntrada, buttonSaida)
+    botoesModalEnviarCancelar.appendChild(botaoEnviarModal)
     
-    
+    botaoEnviarModal.addEventListener ('click', function (e){
+        const el = e.target 
+        
+        if ( el.classList.contains('botao-enviar-modal')){
+            let listaFormadoraEntradaSaida = criandoCardEntradaSaida()
+            listaFormadoraEntradaSaida.classList.toggle('show-modal')
+           
+        }
+        
+    })
 }
 criandoModal()
 
 
-
 function adicionarEventoClick (){
    
+    const nenhumValor = document.querySelector('.nenhum-valor')
+    const pNenhumValorCadastrado = document.querySelector('.p-nenhum-valor-cadastrado')
+    const pRegistrarNovoValor = document.querySelector('.p-registrar-novo-valor')
 
     
     botaoHeader.addEventListener('click', function(e){
         const el = e.target
         console.log(el)
-        if (el.classList.contains('botaoHeader')) {
+        if (el.classList.contains('botaoHeader' )) {
             
             modalContainer.classList.toggle('show-modal')
             
@@ -112,6 +144,31 @@ function adicionarEventoClick (){
         }
        
     })
+
+    nenhumValor.addEventListener('click', function (e){
+        const elemento = e.target
+        console.log(elemento)
+        if (elemento.classList.contains('nenhum-valor' )) {
+            
+            modalContainer.classList.toggle('show-modal')
+            
+        }
+        
+    })
+
+    pNenhumValorCadastrado.addEventListener('click', function (e){
+        const el = e.target
+        if (el.classList.contains('p-nenhum-valor-cadastrado')){
+            modalContainer.classList.toggle('show-modal')
+        }
+    })
+    pRegistrarNovoValor.addEventListener('click', function (e){
+        const el = e.target
+        if (el.classList.contains('p-registrar-novo-valor')){
+            modalContainer.classList.toggle('show-modal')
+        }
+    })
+    
     closeModal.addEventListener('click', function (e){
         const elm = e.target
         if (elm.classList.contains('close-modal')){
@@ -121,3 +178,4 @@ function adicionarEventoClick (){
     })
 }
 adicionarEventoClick()
+

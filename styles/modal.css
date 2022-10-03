@@ -76,29 +76,45 @@
     margin-right: 1.5rem;
     margin-left: 1.5rem;
 }
-.input-radio {
+
+
+
+.escolher-valor {
     display: flex;
     align-items: center;
+    margin-top: 1.563rem;
+    height: 2rem;
 
 }
 .tipo-de-valor {
-    margin-top: 1.563rem;
+    
     margin-left: 1.5rem;
     height: 1.063rem;
     font-size: var(--font-size-3);
     font-weight: var(--font-weight-2);
     line-height: 1.063rem ;
-    margin-bottom: 0.5rem;
+    
     margin-right: 1rem;
+    
 }
-.label-radio {
-    margin-top: 1.563rem;
+.botao-entrada {
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding-left:0.875rem ;
+    padding-right: 0.875rem;
+    border: 0.063rem solid var(--color-grey-5);
 }
-.radio-button {
-    margin-top: 1.563rem;
-    margin-right: 0.75rem;
+.botao-saida {
+    margin-left: 0.75rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding-left:0.875rem ;
+    padding-right: 0.875rem;
+    border: 0.063rem solid var(--color-grey-5);
+}
 
-}
+
+
 .botoes-modal-enviar-cancelar {
     margin-right: 1.5rem;
     display: flex;
@@ -106,6 +122,9 @@
     margin-top: 1.438rem ;
 }
 .botao-cancelar-modal {
+    position: absolute;
+    top: 18.438rem;
+    left: 11.875rem;
     border: none;
     border-radius: 0.5rem;
     background-color: var(--color-grey-4);

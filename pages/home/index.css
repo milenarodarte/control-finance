@@ -45,10 +45,12 @@
     padding-left: 0.875rem;
     padding-right: 0.875rem;
 }
-hj 
 .button-resumo-financeiro:focus {
     background-color: var(--color-brand-3);
     border: 2px solid var(--color-brand-1);
+}
+.button-resumo-financeiro:hover{
+    text-decoration: underline var(--color-brand-1);
 }
 .soma-de-valores {
     display: flex;
@@ -72,7 +74,8 @@ hj
 .ul-entradas {
     display: flex;
     flex-direction: column;
-    width: 43rem ;
+    max-width: 43rem ;
+    width: 100vw;
     gap: 1.25rem;
     margin: 0 auto;
     flex-wrap: wrap;
@@ -80,7 +83,8 @@ hj
    
 }
 .lista-entradas{
-    display:none;
+    
+    display:flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -88,8 +92,10 @@ hj
     border-radius: 0.5rem;
     border: 0.125rem solid var(--color-grey-4);
     height: 2.625rem;
-    width: 100% ;
+    width: 21.438rem ;
+    flex-wrap: wrap;
     margin: 0 auto;
+    
 }
 .botoes-lista {
     width: 8rem;
@@ -127,6 +133,7 @@ hj
     width: 0.766rem;
 }
 .nenhum-valor {
+    display: none;
     margin: 0 auto;
     width: 43rem;
     height: 5.25rem;
@@ -134,7 +141,6 @@ hj
     border-radius: 0.5rem;
     border: 0.125rem dashed var(--color-grey-3);
     background-color: var(--color-grey-5);
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -151,6 +157,12 @@ hj
     font-weight: var(--font-weight-2);
     line-height: 1.06rem;
     color: var(--color-grey-2);
+}
+.show {
+    display: flex;
+}
+.radio{
+    list-style-type: none;
 }
 
 
@@ -229,6 +241,10 @@ hj
     .button-resumo-financeiro:hover{
         text-decoration: underline var(--color-brand-1);
     }
+    .button-resumo-financeiro:focus {
+        background-color: var(--color-brand-3);
+        border: 2px solid var(--color-brand-1);
+    }
     .soma-de-valores {
        margin: 0 auto;
        width: 21.438rem;
@@ -240,10 +256,9 @@ hj
        
 
     }
-    .ul-entradas {
-      
-    }
+    
     .nenhum-valor {
+        display: none;
         margin: 0 auto;
        width: 21.438rem;
        height:5.25rem;
@@ -251,10 +266,12 @@ hj
        border-radius: 0.5rem;
        border: 0.125rem dashed var(--color-grey-3);
        background-color: var(--color-grey-5);
-       display: flex;
        flex-direction: column;
        align-items: center;
        justify-content: center;
+    }
+    .show {
+        display: flex;
     }
 }
 

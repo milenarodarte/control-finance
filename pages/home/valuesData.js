@@ -18,7 +18,6 @@ let insertedValues = [
   },
 ];
 
-console.log(insertedValues)
 
 
 

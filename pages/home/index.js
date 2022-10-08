@@ -8,20 +8,35 @@ let entrada = []
 let saida = []
 let todos = []
 
+
 const ulEntradas = document.querySelector('.ul-entradas')
 
 
-function separandoEntradaESaida () {
-    insertedValues.forEach((parametro) => {
+function separandoEntradaESaida (array) {
+    entrada = []
+    saida = []
+    todos = []
+
+    array.forEach((parametro) => {
         if (parametro.categoryID == 1) {
+
             entrada.push(parametro)
             todos.push(parametro)
+            
         }
         else { saida.push(parametro)
+            
         todos.push(parametro)}
     })
+   
 }
-separandoEntradaESaida()
+
+separandoEntradaESaida(insertedValues)
+
+
+// tem que chamar pra renderizar a entrada e a saida 
+
+
 function renderizandoEntradaSaida(array) {
     ulEntradas.innerHTML = ""
    array.forEach((valor) => {  
@@ -76,7 +91,11 @@ function retirandoValores () {
             insertedValues = arrayFiltrada
             renderizandoEntradaSaida(insertedValues)
             removendoNenhumValor()
+            
+
         } 
+        
+        separandoEntradaESaida(insertedValues)
         if (el.id == "todos") {renderizandoEntradaSaida(todos)}
         if (el.id == "entradas") {renderizandoEntradaSaida(entrada)}
         if (el.id == "saidas"){renderizandoEntradaSaida(saida)}
@@ -92,52 +111,62 @@ function removendoNenhumValor () {
    
     if (insertedValues.length == 0) {
         nenhumValor.classList.add('show')
-        console.log(nenhumValor)
+       
     } else { nenhumValor.classList.remove('show')}
 }
 removendoNenhumValor()
 
 
 
+
+
+
+    
+    
+
+
+
+
+
+
+let novoObjeto = {}
+
 function adicionarNovaEntradaSaida ( ){
     const inputValor = document.querySelector('.input-valor')
     const botaoEntradaSaida = document.querySelectorAll('.botao-entrada-saida')
-    console.log(botaoEntradaSaida)
-    
-
-    document.addEventListener('click', function (e) {
-       const modalContainer = document.querySelector('.modal-container')
+     
+    document.addEventListener('click', function (e){
+        const el = e.target
         
-        const el = e.target 
-        let tipoDoBotao = 1
-        console.log(el.id)
+        if (el.classList.contains('botao-entrada-saida')){
+           
+            let tipoDoBotao = 1 
+            if (el.id == "2") {
+                tipoDoBotao = 2
+            }
 
-        if (el.id == "saida") {
-            tipoDoBotao = 2
-        }
-        let novoObjeto = {
-            id: `${insertedValues.length + 1}`,
-            value: Number(inputValor.value),
-            categoryID: tipoDoBotao,
-        }
-        console.log(novoObjeto)
-
+            novoObjeto = {
+                id: `${insertedValues.length + 1}`,
+                value: Number(inputValor.value),
+                categoryID: tipoDoBotao,
+            }
+        }   
+        
         if (el.classList.contains('botao-enviar-modal')){
+
             if ( Number(inputValor.value) > 0 ) {
                 e.preventDefault()
-            insertedValues.push(novoObjeto)
-            renderizandoEntradaSaida(insertedValues)
-            valorSomaDeValores.innerText = `R$ ${adicionandoSomaDosValores()}`
-            modalContainer.classList.toggle('show-modal')
-            } 
+                insertedValues.push(novoObjeto)
+                renderizandoEntradaSaida(insertedValues)
+                valorSomaDeValores.innerText = `R$ ${adicionandoSomaDosValores()}`
+                modalContainer.classList.toggle('show-modal')
+                } 
             else { alert('É preciso inserir um número maior que 0')}
         }
-            
+        
     })
-    console.log(insertedValues)
-   
-
 }
+
 adicionarNovaEntradaSaida()
 
 function adicionandoSomaDosValores () {

@@ -119,16 +119,6 @@ removendoNenhumValor()
 
 
 
-
-
-    
-    
-
-
-
-
-
-
 let novoObjeto = {}
 
 function adicionarNovaEntradaSaida ( ){
@@ -163,7 +153,7 @@ function adicionarNovaEntradaSaida ( ){
                 } 
             else { alert('É preciso inserir um número maior que 0')}
         }
-        
+        removendoNenhumValor()
     })
 }
 
